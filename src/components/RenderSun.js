@@ -1,46 +1,31 @@
-import React, { useState } from 'react'
-import { BANK_ADDRESS, BANK_ABI } from '../contracts/Bank'
+import React from 'react'
 import { useStakedBalance, useUnstakedBalance } from '../hooks/useBankAttributes'
-import { utils, Contract } from 'ethers'
+import { utils } from 'ethers'
 import Allowance from '../components/Allowance'
 import Unstake from '../components/Unstake'
-import { useContractFunction__fix } from '../hooks/useContractFunction__fix'
+import Stake from '../components/Stake'
+import StakeFromSunBalance from '../components/StakeFromSunBalance'
+import WithdrawSun from '../components/WithdrawSun'
+import DepositSun from '../components/DepositSun'
 
 function RenderSun() {
     const stakedBalance = useStakedBalance();
-    const unstakedBalance = useUnstakedBalance();
-
-    const [stakeAmount, setStakeAmount] = useState(0);
-    
-
-
-    const bankInterface = new utils.Interface(BANK_ABI)
-    const contract = new Contract(BANK_ADDRESS, bankInterface) 
-    const { state, send } = useContractFunction__fix(contract, 'stake', { transactionName: 'stake' });
-
-    const stake = (e) => {
-        e.preventDefault();
-        console.log(stakeAmount.value);
-        send(stakeAmount.value);
-        return false;
-    }
+    const unstakedBalance = useUnstakedBalance();    
 
     return (
         <div>
             <ul>
                 <h3>Sun Balance (Staked): {stakedBalance && utils.formatEther(stakedBalance)} Suns</h3>
                 <Allowance />
-                <form onSubmit={(e) => stake(e)}>
-                    <input id="stake" ref={(input) => setStakeAmount(input)} type="text" placeholder="Amount..." required/>
-                    <input id="stake" type="submit" value="Stake" hidden={false}/>
-                </form>
+                <Stake />
                 <Unstake />
             </ul>
             <ul>
                 <h3>Sun Balance (Unstaked): {unstakedBalance && utils.formatEther(unstakedBalance)} Suns</h3>
-                <button>Stake</button>
-                <button>Deposit</button>
-                <button>Withdraw</button>
+                <StakeFromSunBalance />
+                <Allowance />
+                <DepositSun />
+                <WithdrawSun />
             </ul>
         </div>
     )

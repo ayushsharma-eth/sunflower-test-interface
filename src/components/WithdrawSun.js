@@ -3,17 +3,17 @@ import { BANK_ADDRESS, BANK_ABI } from '../contracts/Bank'
 import { useContractFunction__fix } from '../hooks/useContractFunction__fix'
 import { utils, Contract } from 'ethers'
 
-function WithdrawEth() {
+function WithdrawSun() {
 
     const bankInterface = new utils.Interface(BANK_ABI)
     const contract = new Contract(BANK_ADDRESS, bankInterface) 
-    const { state, send } = useContractFunction__fix(contract, 'withdrawEth', { transactionName: 'withdrawEth' });
+    const { state, send } = useContractFunction__fix(contract, 'withdrawSun', { transactionName: 'withdrawSun' });
 
     const [withdrawAmount, setWithdrawAmount] = useState(0);
 
     const withdraw = (e) => {
         e.preventDefault();
-        console.log("Withdraw", withdrawAmount.value);
+        console.log("withdrawSun", withdrawAmount.value);
         send(withdrawAmount.value);
         return false;
     }
@@ -21,11 +21,11 @@ function WithdrawEth() {
     return (
         <div>
             <form onSubmit={(e) => withdraw(e)}>
-                <input id="withdrawETH" ref={(input) => setWithdrawAmount(input)} type="text" placeholder="" required/>
+                <input id="withdrawSun" ref={(input) => setWithdrawAmount(input)} type="text" placeholder="Amount..." required/>
                 <input type="submit" value="Withdraw" hidden={false}/>
             </form>
         </div>
     )
 }
 
-export default WithdrawEth
+export default WithdrawSun

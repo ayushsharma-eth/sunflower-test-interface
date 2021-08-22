@@ -8,7 +8,7 @@ import Results from './pages/Results'
 import Balances from './pages/Balances'
 import YourMarkets from './pages/YourMarkets'
 
-export function App() {
+export const App = () => {
 
   return(
     <div className="App">

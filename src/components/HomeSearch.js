@@ -8,7 +8,7 @@ export const Search = (props) => {
     const _placeholder = props.placeholder;
 
     const search = (e) => {
-        //e.preventDefault();
+        // e.preventDefault();
         console.log(query.value)
         setRedirect(true);
     }
