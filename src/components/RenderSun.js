@@ -14,19 +14,23 @@ function RenderSun() {
 
     return (
         <div>
-            <ul>
-                <h3>Sun Balance (Staked): {stakedBalance && utils.formatEther(stakedBalance)} Suns</h3>
-                <Allowance />
-                <Stake />
-                <Unstake />
-            </ul>
-            <ul>
-                <h3>Sun Balance (Unstaked): {unstakedBalance && utils.formatEther(unstakedBalance)} Suns</h3>
-                <StakeFromSunBalance />
-                <Allowance />
-                <DepositSun />
-                <WithdrawSun />
-            </ul>
+            <div className="boxed">
+                <ul>
+                    <h3>Sun Balance (Staked): {stakedBalance && utils.formatEther(stakedBalance)} Suns</h3>
+                    <Allowance />
+                    <Stake />
+                    <Unstake />
+                </ul>
+            </div>
+            <div className="boxed">
+                <ul>
+                    <h3>Sun Balance (Unstaked): {unstakedBalance && utils.formatEther(unstakedBalance)} Suns</h3>
+                    <StakeFromSunBalance />
+                    <Allowance />
+                    <DepositSun />
+                    <WithdrawSun />
+                </ul>
+            </div>
         </div>
     )
 }

@@ -9,7 +9,6 @@ export function Market (props) {
           <Navigation search={false} placeholder={"Search..."}/>
           <h1>Sunflower</h1>
           <HomeSearch placeholder={"Testing"} />
-          
       </div>
   )
 }

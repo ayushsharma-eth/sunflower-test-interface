@@ -11,7 +11,7 @@ export function Merchant (props) {
   return (
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
-          <h2>Merchant: {merchant}</h2>
+          <h1>Merchant: {merchant}</h1>
           {account && merchant == account && <CreateMarkets/>}
           <RenderMarkets merchant={merchant}/>
       </div>

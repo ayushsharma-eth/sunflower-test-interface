@@ -4,6 +4,7 @@ import './testSplit.css';
 import { Link } from 'react-router-dom';
 import { useEthers } from '@usedapp/core'
 import { useReturnMerchant } from '../hooks/useReturnMarketAttributes';
+import { utils } from 'ethers'
 
 export function RenderProducts (props) {      
 
@@ -21,14 +22,14 @@ export function RenderProducts (props) {
                                 <div className="left">
                                     <ul key={Math.random(1, 9999)}>Name: {products[i] && products[i].name}</ul>
                                     <ul key={Math.random(1, 9999)}>Quantity: {products[i] && products[i].quantity.toString()}</ul>
-                                    <ul key={Math.random(1, 9999)}>Price: {products[i] && products[i].price.toString()}</ul>
-                                    <ul key={Math.random(1, 9999)}>Currency: {products[i] && products[i].currency.toString()}</ul>
+                                    {products[i] && parseInt(products[i].currency.toString()) === 0 && <ul key={Math.random(1, 9999)}>Price: {products[i] && utils.formatEther(products[i].price.toString())} ETH</ul>}
+                                    {products[i] && parseInt(products[i].currency.toString()) === 1 && <ul key={Math.random(1, 9999)}>Price: {products[i] && utils.formatEther(products[i].price.toString())} DAI</ul>}
+                                    <ul key={Math.random(1, 9999)}><Link to={"/markets/" + props.MARKET_ADDRESS + "/products/" + i}><button>View Product</button></Link></ul>
                                 </div>
                                 <div className="right">
                                     <ul key={Math.random(1, 9999)}>Region: {0}</ul>
                                     <ul key={Math.random(1, 9999)}>Category: {categories[i]}</ul>
                                     <ul key={Math.random(1, 9999)}>Pending Orders: </ul>
-                                    <ul key={Math.random(1, 9999)}><Link to={"/markets/" + props.MARKET_ADDRESS + "/products/" + i}><button>View Product</button></Link></ul>
                                 </div>
                             </div>
                         </div>)

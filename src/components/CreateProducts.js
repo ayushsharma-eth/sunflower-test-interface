@@ -30,14 +30,46 @@ export function CreateProducts (props) {
 
     return (
         <div>
-            <h3>Create Products</h3>
-            <form onSubmit={(e) => createProduct(e)}>
-                <input id="createProduct" ref={(input) => setName(input)} type="text" placeholder="Name..." required/>
-                <input id="createProduct" ref={(input) => setQuantity(input)} type="text" placeholder="Quantity..." required/>
-                <input id="createProduct" ref={(input) => setPrice(input)} type="text" placeholder="Price..." required/>
-                <input id="createProduct" ref={(input) => setCurrency(input)} type="text" placeholder="Currency..." required/>
-                <input id="createProduct" ref={(input) => setRegion(input)} type="text" placeholder="Region..." required/>
-                <input id="createProduct" ref={(input) => setCategory(input)} type="text" placeholder="Category..." required/>
+            <h3>Create Product</h3>
+            <form className="boxed" onSubmit={(e) => createProduct(e)}>
+                <div className="splitscreen">
+                    <div className="left">
+                        <ul>
+                            <strong>Name {}
+                                <input id="createProduct" ref={(input) => setName(input)} type="text" placeholder="" required/>
+                            </strong> 
+                        </ul>
+                        <ul>
+                            <strong>Quantity {}
+                            <input id="createProduct" ref={(input) => setQuantity(input)} type="text" placeholder="" required/>
+                            </strong>
+                        </ul>
+                        <ul>
+                            <strong>Price {}
+                            <input id="createProduct" ref={(input) => setPrice(input)} type="text" placeholder="" required/>
+                            <select id="dropdown" ref = {(input) => setCurrency(input)} required>
+                                <option value="0">ETH</option>
+                                <option value="1">DAI</option>
+                            </select>
+                            </strong>
+                        </ul>
+                    </div>
+                    <div className="right">
+                        <ul>
+                            <strong> Region {}
+                            <input id="createProduct" ref={(input) => setRegion(input)} type="text" placeholder="Region..." required/>
+                            </strong>
+                        </ul>
+                        <ul>
+                            <strong> Category {}
+                            <input id="createProduct" ref={(input) => setCategory(input)} type="text" placeholder="Category..." required/>
+                            </strong>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <input id="createProduct" type="file" required/>
+                </div>
                 <input type="submit" hidden={false}/>
             </form>
         </div>

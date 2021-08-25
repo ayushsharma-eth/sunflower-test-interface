@@ -19,14 +19,16 @@ export const Balances = () => {
             <h2>Active Account: {account}</h2>
             <h3>Wallet Balance: {walletBalance && utils.formatEther(walletBalance)} Suns</h3>
             <h2>Bank</h2>
-            <div className="boxed"> {/* Each ul component below likely to be React Component */}
+            <div> {/* Each ul component below likely to be React Component */}
                 <RenderSun />
                 <RenderEth />
-                <ul>
-                    <h3>Dai Balance: {daiBalance && utils.formatEther(daiBalance)} Dai</h3>
-                    <button>Deposit</button>
-                    <button>Withdraw</button>
-                </ul>
+                <div className="boxed">
+                    <ul>
+                        <h3>Dai Balance: {daiBalance && utils.formatEther(daiBalance)} Dai</h3>
+                        <button>Deposit</button>
+                        <button>Withdraw</button>
+                    </ul>
+                </div>
             </div>
         </div>
     )

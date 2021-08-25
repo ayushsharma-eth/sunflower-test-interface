@@ -1,8 +1,16 @@
 .boxed {
   border: 1px solid green;
+  background-color: white;
+  margin-bottom: 10px;
+  color: black;
 }
 
 .App {
   padding-left: 3%;
   padding-right: 3%;
+  color: black;
+}
+
+.center {
+  text-align: center;
 }

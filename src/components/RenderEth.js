@@ -9,7 +9,7 @@ function RenderEth() {
     const ethereumBalance  = useEthereumBalance();
 
     return (
-        <div>
+        <div className="boxed">
             <ul>
                 <h3>Ethereum Balance: {ethereumBalance && utils.formatEther(ethereumBalance)} Eth</h3>
                 <DepositEth />
