@@ -12,12 +12,7 @@ import CreateProduct from './pages/CreateProduct'
 export const App = () => {
 
   return(
-    <div>
-      <div className="App" style={{backgroundImage: "url(" + "https://wallpaperaccess.com/full/280874.jpg" + ")",
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      height: 1500}} >
+    <div className="App">
         <BrowserRouter>
           <Switch> {/* The Switch decides which component to show based on the current URL.*/}
             <Route exact path='/' component={Home} key={Math.random(1,9999)}/>
@@ -30,7 +25,6 @@ export const App = () => {
             <Route exact path="/results/:query" component={Results} key={Math.random(1,9999)}/>
           </Switch>
         </BrowserRouter>
-        </div>
         <div className="center">
           <h3>Epic Footer</h3>
           <div className="splitscreen">

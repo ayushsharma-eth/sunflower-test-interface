@@ -2,7 +2,7 @@ import React from 'react'
 import Search from '../components/Search'
 import { Link } from "react-router-dom"
 import { useEthers } from '@usedapp/core'
-import './testSplit.css'
+import '../css/testSplit.css'
 
 export const Navigation = (props) => {
     const search = props.search;

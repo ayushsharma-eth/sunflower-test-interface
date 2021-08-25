@@ -1,18 +1,23 @@
 import React from 'react'
 import { Navigation } from '../components/Navigation'
 import HomeSearch from '../components/HomeSearch'
+import '../css/App.css'
 
-export function Market (props) {
+export function Home () {
   
   return (
       <div>
           <Navigation search={false} placeholder={"Search..."}/>
-          <div className="titleCenter">Sunflower</div>
-          <div className="center">
-            <HomeSearch placeholder={"Testing"} />
+          <div className="searchBackground">
+            <div className="titleCenter">Sunflower</div>
+            <div className="homeSearchContainer">
+              <div className="center">
+                <HomeSearch placeholder={"Testing"} />
+              </div>
+            </div>
           </div>
       </div>
   )
 }
 
-export default Market
+export default Home

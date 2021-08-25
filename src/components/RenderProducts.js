@@ -1,6 +1,6 @@
 import React from 'react'
 import { useReturnProducts, useReturnCategories } from '../hooks/useReturnProducts'
-import './testSplit.css';
+import '../css/testSplit.css';
 import { Link } from 'react-router-dom';
 import { useEthers } from '@usedapp/core'
 import { useReturnMerchant } from '../hooks/useReturnMarketAttributes';

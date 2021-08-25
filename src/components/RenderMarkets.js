@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useReturnMarkets } from "../hooks/useReturnMarkets";
 import { useReturnMarketNames, useReturnMarketProductCounts } from "../hooks/useReturnMarketAttributes";
 import { useEthers } from '@usedapp/core'
-import '../App.css'
+import '../css/App.css'
 export const RenderMarkets = (props) => {
     
     const merchant = props.merchant;

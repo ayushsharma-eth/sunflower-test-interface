@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import React from 'react'
 import Navigation from '../components/Navigation';
-import '../App.css'
+import '../css/App.css'
 import { useReturnAllMarkets, useReturnAllMarketNames, useReturnAllMarketMerchants } from '../hooks/useReturnAllMarkets';
 import { Link } from "react-router-dom";
 import { metaphone } from 'metaphone'

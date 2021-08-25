@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navigation } from '../components/Navigation'
-import CreateProducts from '../components/CreateProducts'
 import RenderProducts from '../components/RenderProducts'
 import { useReturnMarketName, useReturnMerchant } from '../hooks/useReturnMarketAttributes'
 import { useEthers } from '@usedapp/core'
