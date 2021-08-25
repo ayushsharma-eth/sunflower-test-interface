@@ -1,9 +1,29 @@
-.splitscreen {
-    display:flex;
+.navFlex {
+    display: flex;
+    justify-content: space-between;
 }
+
+.splitscreen {
+    display: flex;
+}
+
 .splitscreen .left {
     flex: 1;
 }
+
 .splitscreen .right {
     flex: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content:center;
+}
+
+.buttons > div {
+    margin-right: 20px;
+}
+
+#search {
+    width: 300px;
 }

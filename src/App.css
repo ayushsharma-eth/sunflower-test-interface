@@ -5,6 +5,10 @@
   color: black;
 }
 
+.nav {
+  padding-top: 20px;
+}
+
 .App {
   padding-left: 3%;
   padding-right: 3%;
@@ -13,4 +17,20 @@
 
 .center {
   text-align: center;
+}
+
+.titleCenter {
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  font-size: 500%;
+}
+
+#homeSearch {
+  width: 500px;
+  height: 30px;
+}
+
+#homeSearchButton {
+  height: 36px;
 }

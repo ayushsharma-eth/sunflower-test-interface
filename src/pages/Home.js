@@ -7,8 +7,10 @@ export function Market (props) {
   return (
       <div>
           <Navigation search={false} placeholder={"Search..."}/>
-          <h1>Sunflower</h1>
-          <HomeSearch placeholder={"Testing"} />
+          <div className="titleCenter">Sunflower</div>
+          <div className="center">
+            <HomeSearch placeholder={"Testing"} />
+          </div>
       </div>
   )
 }
