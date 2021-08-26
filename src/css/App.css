@@ -8,7 +8,10 @@
 .nav {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: white;
+  background-size: cover;
+  background-color: #333333;
+  position: sticky;
+  top: 0;
 }
 
 .App {
@@ -24,18 +27,19 @@
 
 .titleCenter {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 7%;
   padding-bottom: 2%;
   font-size: 500%;
 }
 
 .homeSearchContainer {
-  padding-bottom: 2%;
+  padding-bottom: 7%;
 }
 
 #homeSearch {
-  width: 500px;
+  width: 490px;
   height: 30px;
+  padding-left: 10px;
 }
 
 #homeSearchButton {
@@ -43,11 +47,10 @@
 }
 
 .searchBackground {
-  background-image: url("https://wallpaperaccess.com/full/280874.jpg");
-  /* background-position: ; */
+  background-image: url("../images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  margin-left: -90px;
-  margin-right: -90px;
+  /* margin-left: -5%;
+  margin-right: -5%; */
 }
