@@ -9,7 +9,8 @@ import { metaphone } from 'metaphone'
 
 export const Results = (props) => {
     
-    const query = props.match.params.query;
+    const category = props.match.params._category;
+    const query = props.match.params._query;
     const addresses = useReturnAllMarkets();
     const names = useReturnAllMarketNames();
     const merchants = useReturnAllMarketMerchants();

@@ -43,6 +43,8 @@
 }
 
 #homeSearchButton {
+  background-color: gold;
+  color: black;
   height: 36px;
 }
 

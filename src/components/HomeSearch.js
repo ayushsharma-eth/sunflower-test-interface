@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Redirect } from "react-router-dom";
+import "../css/Home.css"
 export const Search = (props) => {
 
     const [query, setQuery] = useState(0);
     const [redirect, setRedirect] = useState(0);
+    const [category, setCategory] = useState(0);
+
+    useEffect (() => {
+        setCategory("1");
+    }, [category])
 
     const _placeholder = props.placeholder;
 
@@ -13,12 +19,20 @@ export const Search = (props) => {
         setRedirect(true);
     }
 
+    const options = ["All", "Electronics", "Clothing", "Health"];
+
     return (
         <div>
-            {redirect ? <Redirect push to={"/results/" + query.value.toString()}/> : null}
+            {redirect && category.value ? <Redirect push to={"/category/" + category.value.toString() + "/query/" + query.value.toString()}/> : null}
             <form onSubmit={(e) => search(e)}>
-                    <input id="homeSearch" ref={(input) => setQuery(input)} type="text" placeholder={_placeholder} required/>
-                    <input id="homeSearchButton" type="submit" value="Search" hidden={false}/>
+                <select id="homeSearchSelect" ref = {(input) => setCategory(parseInt(input))} required>
+                    <option value="1">{options[0]}</option>
+                    <option value="2">{options[1]}</option>
+                    <option value="3">{options[2]}</option>
+                    <option value="4">{options[3]}</option>
+                </select>
+                <input id="homeSearch" ref={(input) => setQuery(input)} type="text" placeholder={_placeholder} required/>
+                <input id="homeSearchButton" type="submit" value="Search" hidden={false}/>
             </form>
         </div>
     )

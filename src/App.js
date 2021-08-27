@@ -22,7 +22,7 @@ export const App = () => {
             <Route exact path="/markets/:marketAddress" component={Market} key={Math.random(1,9999)}/>
             <Route exact path="/markets/:marketAddress/createproducts" component={CreateProduct} key={Math.random(1,9999)}/>
             <Route exact path="/markets/:marketAddress/products/:productId" component={Product} key={Math.random(1,9999)}/>
-            <Route exact path="/results/:query" component={Results} key={Math.random(1,9999)}/>
+            <Route exact path="/category/:_category/query/:_query" component={Results} key={Math.random(1,9999)}/>
           </Switch>
         </BrowserRouter>
         <div className="center">

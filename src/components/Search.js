@@ -15,7 +15,7 @@ export const Search = (props) => {
 
     return (
         <div>
-            {redirect ? <Redirect push to={"/results/" + query.value.toString()}/> : null}
+            {redirect ? <Redirect push to={"/category/all/query/" + query.value.toString()}/> : null}
             <form onSubmit={(e) => search(e)}>
                     <input id="search" ref={(input) => setQuery(input)} type="text" placeholder={_placeholder} required/>
                     <input type="submit" value="Search" hidden={false}/>

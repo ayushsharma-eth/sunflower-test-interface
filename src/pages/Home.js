@@ -9,7 +9,7 @@ export function Home () {
       <div>
           <Navigation search={false} placeholder={"Search..."}/>
           <div className="searchBackground">
-            <div className="titleCenter">Sunflower</div>
+            <div className="titleCenter">SUNFLOWER</div>
             <div className="homeSearchContainer">
               <div className="center">
                 <HomeSearch placeholder={"Testing"} />
