@@ -77,3 +77,15 @@
   padding-left: 3%;
   padding-right: 3%;
 }
+
+.buynow {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  background-color: #333333;
+  transform: translate(-50%, 0);
+  margin-top: 7%;
+  padding: 20px;
+  text-align: center;
+}

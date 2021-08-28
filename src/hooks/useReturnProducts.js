@@ -48,3 +48,19 @@ export const useReturnCategories = (marketAddress) => {
         })) : []
     )
 }
+
+export const useReturnRegions = (marketAddress) => {
+
+  const count = useReturnProductCount(marketAddress);
+
+  const marketInterface = new utils.Interface(MARKET_ABI)
+
+  return useContractCalls(
+      count ? [...Array(parseInt(count.toString()))].map((e, i) => ({
+        abi: marketInterface,
+        address: marketAddress,
+        method: 'returnRegion',
+        args: [i],
+      })) : []
+  )
+}

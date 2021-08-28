@@ -48,3 +48,4 @@ export function useContractFunction__fix(contract, functionName, options) {
     return { send, state, events };
 }
 //# sourceMappingURL=useContractFunction.js.map
+export default useContractFunction__fix

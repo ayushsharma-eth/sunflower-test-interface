@@ -17,7 +17,7 @@ export const Balances = () => {
         <div>
             <Navigation search={true} category={3} placeeholder={"Search..."}/>
             <div className="content-container">
-                <h2>Active Account: {account}</h2>
+                <h1>Active Account: {account}</h1>
                 <h3>Wallet Balance: {walletBalance && utils.formatEther(walletBalance)} Suns</h3>
                 <h2>Bank</h2>
                 <div> {/* Each ul component below likely to be React Component */}

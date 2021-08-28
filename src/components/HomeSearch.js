@@ -20,7 +20,7 @@ export const Search = (props) => {
 
     return (
         <div>
-            {redirect ? <Redirect push to={"/category/" + options[category.value].toLowerCase() + "/query/" + query.value.toString()}/> : null}
+            {redirect ? <Redirect push to={"/category/" + options[category.value] + "/query/" + query.value.toString()}/> : null}
             <form onSubmit={(e) => search(e)}>
                 <select id="homeSearchSelect" ref = {(input) => setCategory(input)} required>
                     <option value="0">{options[0]}</option>

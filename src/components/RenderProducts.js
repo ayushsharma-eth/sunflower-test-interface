@@ -1,5 +1,5 @@
 import React from 'react'
-import { useReturnProducts, useReturnCategories } from '../hooks/useReturnProducts'
+import { useReturnProducts, useReturnCategories, useReturnRegions } from '../hooks/useReturnProducts'
 import '../css/testSplit.css';
 import { Link } from 'react-router-dom';
 import { useEthers } from '@usedapp/core'
@@ -9,6 +9,7 @@ import { utils } from 'ethers'
 export function RenderProducts (props) {      
 
     const products = useReturnProducts(props.MARKET_ADDRESS);
+    const regions = useReturnRegions(props.MARKET_ADDRESS);
     const categories = useReturnCategories(props.MARKET_ADDRESS);
     const { account } = useEthers();
     const merchant = useReturnMerchant(props.MARKET_ADDRESS);
@@ -27,7 +28,9 @@ export function RenderProducts (props) {
                                     <ul key={Math.random(1, 9999)}><Link to={"/markets/" + props.MARKET_ADDRESS + "/products/" + i}><button>View Product</button></Link></ul>
                                 </div>
                                 <div className="right">
-                                    <ul key={Math.random(1, 9999)}>Region: {0}</ul>
+                                    <ul key={Math.random(1, 9999)}>Region: {regions && regions[i] && regions[i].map((f, o) => {
+                                        return regions[i][o]
+                                    })}</ul>
                                     <ul key={Math.random(1, 9999)}>Category: {categories[i]}</ul>
                                     <ul key={Math.random(1, 9999)}>Pending Orders: </ul>
                                 </div>
