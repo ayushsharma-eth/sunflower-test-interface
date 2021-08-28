@@ -15,9 +15,10 @@
 }
 
 .App {
+  background-color: #f5f5f5;
   margin: 0px;
-  padding-left: 3%;
-  padding-right: 3%;
+  /* padding-left: 3%;
+  padding-right: 3%; */
   color: black;
 }
 
@@ -49,10 +50,30 @@
 }
 
 .searchBackground {
-  background-image: url("../images/background.png");
+  /* background-image: url("../images/background1.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: top;
+  background-repeat: no-repeat; */
   height: 100%;
   /* margin-left: -5%;
   margin-right: -5%; */
+}
+
+/* .background-fixed {
+  top: 0;
+  z-index: -1;
+  position: fixed; 
+  background-image: url("../images/gagnon-removable-abstract-watercolor-background-wall-mural.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 100%;
+  margin-left: -3%;
+  margin-right: -3%;
+} */
+
+.content-container {
+  padding-left: 3%;
+  padding-right: 3%;
 }

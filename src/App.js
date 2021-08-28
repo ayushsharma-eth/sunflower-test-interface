@@ -13,6 +13,7 @@ export const App = () => {
 
   return(
     <div className="App">
+        <div className="background-fixed"></div>
         <BrowserRouter>
           <Switch> {/* The Switch decides which component to show based on the current URL.*/}
             <Route exact path='/' component={Home} key={Math.random(1,9999)}/>

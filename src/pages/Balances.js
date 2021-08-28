@@ -15,19 +15,21 @@ export const Balances = () => {
     
     return (
         <div>
-            <Navigation search={true} placeeholder={"Search..."}/>
-            <h2>Active Account: {account}</h2>
-            <h3>Wallet Balance: {walletBalance && utils.formatEther(walletBalance)} Suns</h3>
-            <h2>Bank</h2>
-            <div> {/* Each ul component below likely to be React Component */}
-                <RenderSun />
-                <RenderEth />
-                <div className="boxed">
-                    <ul>
-                        <h3>Dai Balance: {daiBalance && utils.formatEther(daiBalance)} Dai</h3>
-                        <button>Deposit</button>
-                        <button>Withdraw</button>
-                    </ul>
+            <Navigation search={true} category={3} placeeholder={"Search..."}/>
+            <div className="content-container">
+                <h2>Active Account: {account}</h2>
+                <h3>Wallet Balance: {walletBalance && utils.formatEther(walletBalance)} Suns</h3>
+                <h2>Bank</h2>
+                <div> {/* Each ul component below likely to be React Component */}
+                    <RenderSun />
+                    <RenderEth />
+                    <div className="boxed">
+                        <ul>
+                            <h3>Dai Balance: {daiBalance && utils.formatEther(daiBalance)} Dai</h3>
+                            <button>Deposit</button>
+                            <button>Withdraw</button>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -10,9 +10,11 @@ export function YourMarkets () {
   return (
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
-          <h2>Active Account: {account}</h2>
-          <CreateMarkets/>
-          <RenderMarkets merchant={account}/>
+          <div className="content-container">
+            <h1>Active Account: {account}</h1>
+            <CreateMarkets/>
+            <RenderMarkets merchant={account}/>
+          </div>
       </div>
   )
 }

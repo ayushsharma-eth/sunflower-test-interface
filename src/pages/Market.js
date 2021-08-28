@@ -15,15 +15,17 @@ export function Market (props) {
   return (
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
-          <h1>{name}</h1>
-          <h3>Merchant: {merchant}</h3>
-          <div>
-            {merchant && account && merchant != account ? <Link to={"/merchant/" + merchant}><button>View Merchant</button></Link> : <Link to={"/merchant/" + merchant}><button>View Your Merchant Profile</button></Link>}
+          <div className="content-container">
+            <h1>{name}</h1>
+            <h3>Merchant: {merchant}</h3>
+            <div>
+              {merchant && account && merchant != account ? <Link to={"/merchant/" + merchant}><button>View Merchant</button></Link> : <Link to={"/merchant/" + merchant}><button>View Your Merchant Profile</button></Link>}
+            </div>
+            <div>
+              {merchant && account && merchant == account && <Link to={"/markets/" + market_address + "/createproducts"}><button>Create Product</button></Link>}
+            </div>
+            <RenderProducts MARKET_ADDRESS={market_address} />
           </div>
-          <div>
-            {merchant && account && merchant == account && <Link to={"/markets/" + market_address + "/createproducts"}><button>Create Product</button></Link>}
-          </div>
-          <RenderProducts MARKET_ADDRESS={market_address} />
       </div>
   )
 }

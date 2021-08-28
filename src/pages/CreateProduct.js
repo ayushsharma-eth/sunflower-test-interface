@@ -14,8 +14,10 @@ export function CreateProduct (props) {
   return (
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
-          <h1>{name}</h1>
-          {merchant && account && merchant == account && <CreateProducts MARKET_ADDRESS={market_address} />}
+          <div className="content-container">
+            <h1>{name}</h1>
+            {merchant && account && merchant == account && <CreateProducts MARKET_ADDRESS={market_address} />}
+          </div>
       </div>
   )
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import { useReturnProduct } from '../hooks/useReturnProducts'
 import { useReturnMarketName } from '../hooks/useReturnMarketAttributes'
+import { utils } from 'ethers'
+import { Link } from 'react-router-dom'
 
 function Product(props) {
 
@@ -22,18 +24,21 @@ function Product(props) {
     return (
         <div>
             <Navigation search={true}  placeholder={"Search..."}/>
-            <h1>Market: {name}</h1>
-            <h2>Product: {product && product.name}</h2>
-            {product ? <div>
-                <h3>Quantity: {product.quantity && product.quantity.toString()}</h3>
-                <h3>Price: {product.price && product.price.toString()}</h3>
-                <h3>Currency: {product.currency}</h3>
-            </div> : null}
-            <form onSubmit={(e) => purchase(e)}>
-                <input id="quantity" ref={(input) => setQuantity(input)} type="text" placeholder="Quantity..." required/>
-                <input onClick={() => setButton(0)} type="submit" value={"Add To Cart"} hidden={false}/>
-                <input onClick={() => setButton(1)} type="submit" value={"Buy Now"} hidden={false}/>
-            </form>
+            <div className="content-container">
+                <h1>{product && product.name}</h1>
+                <h3>Market: {name}</h3>
+                <Link to={"/markets/" + market_address}><button>View Market</button></Link>
+                {product ? <div>
+                    <h3>Quantity: {product.quantity && product.quantity.toString()}</h3>
+                    {product.currency === 0 && <h3>Price: {product.price && utils.formatEther(product.price.toString())} ETH</h3>}
+                    {product.currency === 1 && <h3>Price: {product.price && utils.formatEther(product.price.toString())} DAI</h3>}
+                </div> : null}
+                <form onSubmit={(e) => purchase(e)}>
+                    <input id="quantity" ref={(input) => setQuantity(input)} type="text" placeholder="Quantity..." required/>
+                    <input onClick={() => setButton(0)} type="submit" value={"Add To Cart"} hidden={false}/>
+                    <input onClick={() => setButton(1)} type="submit" value={"Buy Now"} hidden={false}/>
+                </form>
+            </div>
         </div>
     )
 }

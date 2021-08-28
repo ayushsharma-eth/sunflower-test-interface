@@ -11,9 +11,11 @@ export function Merchant (props) {
   return (
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
-          <h1>Merchant: {merchant}</h1>
-          {account && merchant == account && <CreateMarkets/>}
-          <RenderMarkets merchant={merchant}/>
+          <div className="content-container">
+            <h1>Merchant: {merchant}</h1>
+            {account && merchant == account && <CreateMarkets/>}
+            <RenderMarkets merchant={merchant}/>
+          </div>
       </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Navigation } from '../components/Navigation'
 import HomeSearch from '../components/HomeSearch'
 import '../css/App.css'
+import TestCarousel from '../components/TestCarousel'
 
 export function Home () {
   
@@ -9,7 +10,7 @@ export function Home () {
       <div>
           <Navigation search={false} placeholder={"Search..."}/>
           <div className="searchBackground">
-            <div className="titleCenter">SUNFLOWER</div>
+            <div className="titleCenter">Sunflower</div>
             <div className="homeSearchContainer">
               <div className="center">
                 <HomeSearch placeholder={"Testing"} />
