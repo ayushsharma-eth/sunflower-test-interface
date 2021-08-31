@@ -1,5 +1,5 @@
 import React from 'react'
-import Navigation from '../components/Navigation'
+import { Navigation } from '../components/Navigation'
 import { useSunBalance } from '../hooks/useSunBalance'
 import { useEthers } from '@usedapp/core'
 import { useDaiBalance } from '../hooks/useBankAttributes'
@@ -15,11 +15,10 @@ export const Balances = () => {
     
     return (
         <div>
-            <Navigation search={true} category={3} placeeholder={"Search..."}/>
+            <Navigation search={true} selector={"All"} placeholder={"Search..."}/>
             <div className="content-container">
-                <h1>Active Account: {account}</h1>
+                <h1>Bank</h1>
                 <h3>Wallet Balance: {walletBalance && utils.formatEther(walletBalance)} Suns</h3>
-                <h2>Bank</h2>
                 <div> {/* Each ul component below likely to be React Component */}
                     <RenderSun />
                     <RenderEth />

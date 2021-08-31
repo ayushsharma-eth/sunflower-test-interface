@@ -4,9 +4,7 @@ export const Search = (props) => {
 
     const [query, setQuery] = useState(0);
     const [redirect, setRedirect] = useState(0);
-    const [category, setCategory] = useState(0);
-
-    const options = ["All", "Electronics", "Clothing", "Health"];
+    const [category, setCategory] = useState(props.selector);
 
     const _placeholder = props.placeholder;
 
@@ -18,16 +16,16 @@ export const Search = (props) => {
 
     return (
         <div>
-            {redirect ? <Redirect push to={"/category/" + options[category.value] + "/query/" + query.value.toString()}/> : null}
+            {redirect ? <Redirect push to={"/category/" + category.value + "/query/" + query.value.toString()}/> : null}
             <form onSubmit={(e) => search(e)}>
-                    <select ref={(input) => setCategory(input)} required>
-                        <option value="0">{options[0]}</option>
-                        <option value="1">{options[1]}</option>
-                        <option value="2">{options[2]}</option>
-                        <option value="3">{options[3]}</option>
+                    <select id="searchSelect" ref={(input) => {setCategory(input)}} required>
+                        <option value="All">All</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Health">Health</option>
                     </select>
                     <input id="search" ref={(input) => setQuery(input)} type="text" placeholder={_placeholder} required/>
-                    <input type="submit" value="Search" hidden={false}/>
+                    <input type="submit" value="Search" hidden={true}/>
             </form>
         </div>
     )

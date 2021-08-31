@@ -11,7 +11,7 @@ export function YourMarkets () {
       <div>
           <Navigation search={true} placeholder={"Search..."}/>
           <div className="content-container">
-            <h1>Active Account: {account}</h1>
+            <h1>Your Markets</h1>
             <CreateMarkets/>
             <RenderMarkets merchant={account}/>
           </div>

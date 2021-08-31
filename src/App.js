@@ -9,8 +9,9 @@ import Balances from './pages/Balances'
 import YourMarkets from './pages/YourMarkets'
 import CreateProduct from './pages/CreateProduct'
 import Purchase from './pages/Purchase'
+import ManageOrders from './pages/ManageOrders';
 
-export const App = () => {
+const App = () => {
 
   return(
     <div className="App">
@@ -26,6 +27,7 @@ export const App = () => {
             <Route exact path="/markets/:marketAddress/products/:productId" component={Product} key={Math.random(1,9999)}/>
             <Route exact path="/category/:_category/query/:_query" component={Results} key={Math.random(1,9999)}/>
             <Route exact path="/checkout" component={Purchase} key={Math.random(1, 9999)}/>
+            <Route exact path="/orders" component={ManageOrders} key={Math.random(1, 9999)}/>
           </Switch>
         </BrowserRouter>
         <div className="center">

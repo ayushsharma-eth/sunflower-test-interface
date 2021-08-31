@@ -8,12 +8,12 @@ export function Home () {
   
   return (
       <div>
-          <Navigation search={false} placeholder={"Search..."}/>
+          <Navigation search={false}/>
           <div className="searchBackground">
             <div className="titleCenter">Sunflower</div>
             <div className="homeSearchContainer">
               <div className="center">
-                <HomeSearch placeholder={"Testing"} />
+                <HomeSearch placeholder={"Search..."} />
               </div>
             </div>
           </div>

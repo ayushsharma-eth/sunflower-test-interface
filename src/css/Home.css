@@ -1,5 +1,45 @@
+.titleCenter {
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 2%;
+    font-size: 500%;
+}
+
 #homeSearchSelect {
     background-color: gold;
     color: black;
+    height: 34px;
+    border-radius: 12px 0px 0px 12px; /*TL, TR, BR, BL*/
+    border: 1px solid black;
+}
+
+.homeSearchContainer {
+    padding-bottom: 7%;
+}
+  
+#homeSearch {
+    width: 490px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 0px 12px 12px 0px; /*TL, TR, BR, BL*/
+    border: 1px solid black;
+    outline: none;
+}
+
+#homeSearchButton {
+    background-color: gold;
+    color: black;
     height: 36px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+.searchBackground {
+    /* background-image: url("../images/background1.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; */
+    height: 100%;
+    /* margin-left: -5%;
+    margin-right: -5%; */
 }

@@ -5,7 +5,7 @@ import { useReturnMarketName, useReturnMerchant } from '../hooks/useReturnMarket
 import { useEthers } from '@usedapp/core'
 import { Link } from 'react-router-dom'
 
-export function Market (props) {
+const Market = (props) => {
   
   const market_address = props.match.params.marketAddress
   const name = useReturnMarketName(market_address);
@@ -14,7 +14,7 @@ export function Market (props) {
 
   return (
       <div>
-          <Navigation search={true} placeholder={"Search..."}/>
+          <Navigation search={true} selector={"All"} placeholder={"Search..."}/>
           <div className="content-container">
             <h1>{name}</h1>
             <h3>Merchant: {merchant}</h3>

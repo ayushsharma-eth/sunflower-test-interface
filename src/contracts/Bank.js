@@ -1,4 +1,4 @@
-export const BANK_ADDRESS = "0xfAc0c33A07cB94eFaaa8969bE610B1eDC2a1aBBa"
+export const BANK_ADDRESS = "0xB70a63292F644eE80fd97Bf46574087472f9C26d"
 
 export const BANK_ABI = [
   {

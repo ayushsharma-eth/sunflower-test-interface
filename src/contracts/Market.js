@@ -314,6 +314,72 @@ export const MARKET_ABI = [
         "type": "uint256"
       }
     ],
+    "name": "returnOrders",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "accepted",
+            "type": "bool"
+          },
+          {
+            "internalType": "address payable",
+            "name": "customer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "product",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "encryptedAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "uint32",
+            "name": "quantity",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "escrowAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "escrowCurrency",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "region",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "arbitrator",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct Market.Order[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productId",
+        "type": "uint256"
+      }
+    ],
     "name": "returnCategory",
     "outputs": [
       {

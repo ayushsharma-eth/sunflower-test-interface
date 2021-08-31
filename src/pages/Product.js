@@ -5,6 +5,7 @@ import { useReturnMarketName } from '../hooks/useReturnMarketAttributes'
 import { utils } from 'ethers'
 import { Link } from 'react-router-dom'
 import BuyNow from '../components/BuyNow'
+import RenderOrder from '../components/RenderOrder'
 
 function Product(props) {
 
@@ -25,7 +26,7 @@ function Product(props) {
 
     return (
         <div>
-            <Navigation search={true}  placeholder={"Search..."}/>
+            <Navigation search={true} selector={"All"} placeholder={"Search..."}/>
             <div className="content-container">
                 {product && showForm ? <BuyNow price={product.price} productId={productId} market_address={market_address}/> : null}
                 <h1>{product && product.name}</h1>
@@ -41,6 +42,8 @@ function Product(props) {
                     <input id="quantity" ref={(input) => setQuantity(input)} type="text" placeholder="Quantity..." required/>
                     <input onClick={() => setButton(0)} type="submit" value={"Add To Cart"} hidden={false}/>
                 </form>
+                <h1>Orders</h1>
+                <RenderOrder market_address={market_address} productId={productId} />
             </div>
         </div>
     )

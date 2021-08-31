@@ -29,7 +29,7 @@ export const Search = (props) => {
                     <option value="3">{options[3]}</option>
                 </select>
                 <input id="homeSearch" ref={(input) => setQuery(input)} type="text" placeholder={_placeholder} required/>
-                <input id="homeSearchButton" type="submit" value="Search" hidden={false}/>
+                <input id="homeSearchButton" type="submit" value="Search" hidden={true}/>
             </form>
         </div>
     )

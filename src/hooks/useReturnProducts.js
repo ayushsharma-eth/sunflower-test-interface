@@ -1,6 +1,6 @@
 import { MARKET_ABI } from '../contracts/Market'
 import { useContractCall, useContractCalls } from '@usedapp/core'
-import { useReturnProductCount } from "../hooks/useReturnMarketAttributes";
+import { useReturnProductCount } from "./useReturnMarketAttributes";
 import { utils } from "ethers"
 
 export const useReturnProducts = (marketAddress) => {

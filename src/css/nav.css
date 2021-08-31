@@ -1,0 +1,77 @@
+.nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-size: cover;
+    background-color: #333333;
+    position: sticky;
+    top: 0;
+}
+
+#connectButton {
+    background-color: gold;
+    color: black;
+    border-radius: 12px;
+}
+
+#connectedAccount {
+    background-color: white;
+    border-radius: 0px 12px 12px 0px; /*TL, TR, BR, BL*/
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #333333;
+}
+
+#connectedNetwork {
+    color: #333333;
+    background-color: gold;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 12px 0px 0px 12px; /*TL, TR, BR, BL*/
+    border: 1px solid #333333;
+}
+
+#navButton a
+{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    color: white; 
+}
+
+#navButton a:hover
+{
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+#navButton a:active
+{
+    border: 1px solid gold;
+    border-radius: 8px;
+    color: gold;
+}
+
+#searchSelect {
+    background-color: gold;
+    color: black;
+    height: 29px;
+    border-radius: 12px 0px 0px 12px; /*TL, TR, BR, BL*/
+    border: 1px solid black;
+    outline: none;
+}
+  
+#search {
+    width: 490px;
+    height: 25px;
+    padding-left: 10px;
+    border-radius: 0px 12px 12px 0px; /*TL, TR, BR, BL*/
+    border: 1px solid black;
+    outline: none;
+}
